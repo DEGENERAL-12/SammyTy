@@ -1,0 +1,782 @@
+:root {
+    --color-primary: #7380cc;
+    --color-danger: #ff324e;
+    --color-success: #0caa78;
+    --color-warning: #ffc35c;
+    --color-background: #f6efef;
+    --color-info-dark: #90898a;
+    --color-info-light: #e8dddf;
+    --color-dark: #6b6c72;
+    --color-light: #dadee6;
+    --color-primary-varient: #111e83;
+    --color-dark-varient: #677483;
+    --color-primary-varient: #f6f6f9;
+    --color-white-primary: #ffffff;
+
+
+    
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+
+    --card-padding: 1.7rem;
+    --padding-1: 1.2rem;
+
+    --box-shadow: 0px 5px 2rem var(--color-light);
+}
+
+.dark-theme-varables{
+    --color-background: #181a1e;
+    --color-info-dark: #90898a;
+    --color-dark: #edeffd;
+    --color-light: rgba(0, 0, 0, 0.4);
+    --color-white-primary: #202528;
+    --box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    outline: 0;
+    text-decoration: none;
+    appearance: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 14px;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    font-family: 'poppins', sans-serif;
+    user-select: none;
+    /* overflow: hidden; */
+    background: var(--color-background);
+}
+
+h1{
+    font-size: 20px;
+}
+ 
+
+h2{
+    font-size: 16px;
+}
+ 
+.container{
+    display: grid;
+    width: 96%;
+    margin: 0 auto;
+    grid-template-columns: 14rem auto 23rem;
+    gap: 1.8rem;
+}
+
+.aside{
+    height: 100vh;
+}
+
+.success{
+    color: var(--color-success);
+}
+
+.danger{
+    color: var(--color-danger);
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+ 
+.logo img{
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+#close-btn{
+    display: none;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.logo .dash{
+    color: var(--color-primary);
+}
+
+.logo span{
+    color: var(--color-danger);
+}
+
+.navLinks{
+    display: flex;
+    flex-direction: column;
+    height: 86vh;
+    position: relative;
+    top: 3rem;
+}
+/* warning */
+.warning{
+    color: var(--color-warning);
+}
+
+.desable{
+    color: var(--color-danger);
+}
+
+
+.navLinks h3{
+    font-weight: 500;
+}
+
+.aside .navLinks a{
+    display: flex;
+    color: var(--color-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    position: relative;
+    height: 3.7rem;
+    transition: all 300ms ease;
+}
+
+.aside .navLinks a:last-child{
+    position: absolute;
+    bottom: 10px;
+    color: var(--color-primary);
+}
+
+.aside .navLinks a i{
+    font-size: 1.2rem;
+    transition: all 300ms ease;
+
+}
+
+.aside .navLinks a.active{
+    color: var(--color-primary);
+    background: var(--color-light);
+    margin-left: 0;
+}
+
+.aside .navLinks a.active:before{
+    content: " ";
+    width: 6px;
+    height: 100%;
+    background: var(--color-primary);
+}
+
+
+.aside .navLinks a.active i{
+    color: var(--color-primary);
+    margin-left: calc(1rem - 3px);
+}
+
+.aside .navLinks a:hover{
+    color: var(--color-primary);
+}
+
+.aside .navLinks a:hover i{
+    margin-right: 20px;
+}
+
+.message-count{
+    background: var(--color-danger);
+    color: var(--color-background);
+    padding: 2px 10px;
+    font-size: 11px;
+    border-radius: var(--border-radius-1);
+}
+
+
+/* dashbord section */
+
+.main-section{
+    margin-top: 16px;
+}
+
+.main-section h1{
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 22px;}
+
+.date{
+    display: inline-block;
+    background: var(--color-light);
+    padding: 6px 17px;
+    border-radius: 7px;
+    margin-top: 10px;
+}
+
+.date input[type="date"]{
+    background: transparent;
+    color: var(--color-dark);
+    border: none;
+    
+}
+
+
+.insights{ 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 14px;
+    gap: 1.6rem;
+    
+}
+
+.insights > div{
+    background: var(--color-white-primary);
+    padding: var(--card-padding);
+    border-radius: var(--card-border-radius);
+    margin-top: 0.8rem;
+    box-shadow: 0px 6px 9px var(--color-dark);
+    transition: all 300ms ease; 
+}
+
+.insights > div:hover{
+    box-shadow: none;
+}
+
+.insights span{
+    background: var(--color-primary);
+    color: var(--color-background);
+    border-radius: 5rem;
+    padding: 7px;
+    font-size: 30px;
+    font-weight: 500
+}
+
+/* .expenses{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.expenses span{
+    background: var(--color-danger);
+}
+
+.income span{
+    background: var(--color-success);
+}
+
+.left{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.left-text h3{
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.progress{
+    position: relative;
+}
+svg{
+    width: 9rem;
+    height: 9rem;
+}
+
+.textMuted{
+    color: var(--color-info-dark); 
+}
+
+/* first sales styling  */
+/* .sales{
+    display: flex;
+    padding: 12px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.saless .left, .saless .right{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+
+}
+
+.saless .right{
+    justify-content: center;
+    align-items: center;
+} */
+
+/* .saless .right .parent{
+    width: 100%;
+    aspect-ratio: 1/1;
+    background: conic-gradient(rgb(43, 203, 123) 45deg, rgb(45, 229, 106) 320deg, white 320deg, white 360deg);
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+} */
+
+/* .saless .right .parent .progress{
+    width: 70%;
+    aspect-ratio: 1/1;
+    background-color: white;
+    border-radius: 50%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+} */
+/* end of the first sales styling */
+
+.total-sales .lefts, .expenses .middle, .income .right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expenses .progress, .income .progress, .total-sales .progress{
+    position: relative;
+    width: 92px;
+    height: 92px;
+    margin-left: 10px;
+    border-radius: 50px;
+
+}
+
+.expenses .lefts .left, .middle .left, .right .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.expenses .middle .left h3{
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.insights svg circle{
+    fill: none;
+    stroke: var(--color-primary);
+    stroke-width: 14;
+    stroke-linecap: round;
+    transform: translate(5px, 5px);
+    stroke-dasharray: 110;
+    stroke-dashoffset: 92px;
+}
+
+.total-sales .progress svg circle{
+    stroke-dashoffset: 10;
+    stroke-dasharray: 170;
+}
+
+.income .progress svg circle{
+    stroke-dashoffset: 20;
+    stroke-dasharray: 200;
+}
+
+.progress .number{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+/* recent orders styling */
+
+.recent-orders{
+    margin-top: 2rem;
+}
+
+.recent-orders > h2{
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 0.9rem;
+}
+
+table{
+    background: #ffffff;
+    width: 100%;
+    border-radius: 26px;
+    padding: 2.3rem;
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+
+}
+
+.recent-orders table:hover{
+    box-shadow: none;
+}
+
+thead tr th{
+    border-bottom: 1px solid rgb(196, 196, 228);
+    padding-bottom: 9px;
+    font-size: 15px;
+    margin: 0;
+    color: #1145a4;
+}
+tbody tr td{
+    height: 2.8rem;
+    border-bottom: 1px var(--color-info-light) solid;
+    color: var(--color-dark-varient);
+}
+
+tbody tr:last-child td{
+    border: none;
+}
+
+.showall{
+    text-align: center;
+    display: block;
+    color: #111e83;
+    margin: 1rem auto;
+}
+
+/* last section */
+
+.rightSection{
+    margin-top: 10px;
+}
+
+.rightSection .top{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    width: 300px;
+    /* height: 90px; */
+}
+
+.top .toggle-menu{
+    display: none;
+}
+
+.top .top-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-light);
+    margin-right: 3.9rem;
+    height: 24px;
+    width: 4rem;
+    border-radius: var(--border-radius-1);
+}
+
+.top .top-icons div span{
+    background-color: var(--color-primary);
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--border-radius-1);
+    color: var(--color-white-primary);
+    font-size: 1.4rem;
+}
+
+.top .top-icons span{
+    font-size: 1.4rem;
+}
+
+.top button{
+    display: none;
+    width: 30px;
+    height: 30px;
+}
+
+.rightSection .top .profiles{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightSection .top .profiles{
+    color: var(--color-info-dark);
+    gap: 10px;
+}
+
+.rightSection h2{
+    margin-bottom: 1.7rem;
+}
+.rightSection .top .profiles span{
+    color: black;
+}
+
+.profile img{
+    width: 40px;
+    height: 40px;
+    background-size: cover;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.update{
+    display: flex;
+    flex-direction: column;
+    background: var(--color-white-primary);
+    padding: 1.9rem;
+    border-radius: var(--card-border-radius);
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+}
+
+.update:hover{
+    box-shadow: none;
+}
+
+.update .sub-update{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.update .sub-update div span{
+    color: rgb(119, 112, 112);
+    font-weight: bold;
+}
+
+.update .sub-update div p{
+    font-size: 13px;
+    color: var(--color-info-dark)
+}
+
+.sls{
+    margin-top: 1.8rem;
+    margin-bottom: 0px;
+    font-size: 17px;
+}
+
+.sales{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* margin-top: 0px; */
+    justify-content: center;
+}
+
+.sales .list{
+    display: flex;
+    background-color: var(--color-white-primary);
+    justify-content: center;
+    padding: 1rem;
+    align-items: start;
+    margin-bottom: 10px;
+    border-radius: var(--border-radius-3);
+    gap: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.sales .list:hover{
+    box-shadow: none;
+}
+
+.sales span{
+    background: var(--color-primary);
+    color: var(--color-white-primary);
+    padding: 7px;
+    border-radius: 5rem;
+    font-size: 1.4rem;
+
+}
+
+.sales .sub-sales2 span{
+    background: var(--color-danger);
+}
+
+ .sub-sales3 span{
+    background: var(--color-success);
+}
+
+
+.sub-sales4{
+    border: 2px dashed var(--color-primary);
+    background-color: transparent;
+    color: var(--color-primary);
+    display: flex;
+    padding: 0.7rem;
+    border-radius: var(--border-radius-3);
+    align-items: center;
+    justify-content: center;
+}
+
+.sub-sales4 div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.sub-sales4 div span{
+    background: transparent;
+    color: var(--color-primary);
+}
+
+
+/* media queries */
+@media screen and (max-width: 1200px) {
+
+.container{
+        width: 94%;
+        grid-template-columns: 7rem auto 23rem;
+}
+
+.top .logo h1{
+    display: none;
+    }
+
+.aside .navLinks h3{
+    display: none;
+}
+
+.aside .navLinks a{
+    width: 5.4rem;
+}
+
+.aside .navLinks a:last-child{
+    position: relative;
+    margin-top: 1.8rem
+}
+
+.main-section .insights{
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
+.main-section .recent-orders{
+    width: 96%;
+    position: absolute;
+    left: 56%;
+    transform: translate(-56%);
+    margin: 5rem 0 0 8.8rem;
+}
+
+.main-section .recent-orders table{
+    width: 83vw;
+}
+
+.main-section .recent-orders table thead tr th:last-child,
+table thead tr th:first-child{
+    display: none;
+}
+
+.main-section .recent-orders table tbody tr td:last-child,
+table tbody tr td:first-child{
+    display: none;
+}
+
+}
+
+@media screen and (max-width: 760px){
+    .container{
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+
+    .aside{
+        width: 60%;
+        height: 100vh;
+        position: fixed;
+        left: -100%;
+        background-color:var(--color-white-primary);
+        box-shadow: var(--box-shadow);
+        z-index: 3;
+        padding-right: var(--card-padding);
+        visibility: hidden;
+        animation: showMenu 400ms ease forwards;
+    }
+
+    .aside .top .logo h1{
+        display: block;
+    }
+
+    .aside .top #close-btn{
+        display: inline-block;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+
+    .aside .navLinks a{
+        width: 80%;
+    }
+
+    .aside .navLinks a h3{
+        display: inline;
+        
+    }
+
+    .aside .navLinks a:last-child{
+        position: absolute;
+        bottom: 5rem;
+    }
+
+    .main-section {
+        margin-top: 8rem; 
+        padding: 0.1rem;
+    }
+
+    @keyframes  showMenu {
+        to {
+            left: 0;
+        }
+    }
+    .main-section .insights{
+        position: relative;
+        margin: 3px 0 0 0;
+        width: 100%;
+    }
+
+    .main-section .recent-orders{
+        width: 100%;
+        margin: 3rem 0 0 0;
+        position: relative;
+    }
+    .main-section .recent-orders table{
+        width:97%;
+    }
+
+    .top button{
+        display: inline-block;
+        background: transparent;
+        border: none;
+        font-size: 16px;
+        cursor: pointer;
+        position: absolute;
+        left: 1rem;
+    }
+
+    .rightSection .top{
+        width: 100%;
+        background: var(--color-white-primary);
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 4.6rem;
+        margin: 0;
+        padding: 0 0 0 7rem;
+        align-items: center;
+        z-index: 2;
+        box-shadow: var(--box-shadow);
+    }
+    .rightSection .top .profiles div p{
+        display: none;
+    }
+    .rightSection .update .sub-update{
+        width: 300px;   
+    }
+}

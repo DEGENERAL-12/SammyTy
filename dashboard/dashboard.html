@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fc0d8137f8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="aside">
+          <div class="top">
+            <div class="logo">
+              <img src="../pics/logo.jpg" width="100px" height="50px" >
+              <h1>Sam<span class="dash">_</span><span>Codex</span></h1>
+            </div>
+
+            <div class="close" id="close-btn">
+              <i class="fa-solid fa-xmark"></i>
+            </div>
+          </div>
+            
+            <div class="navLinks">    
+                  <a  href="">
+                    <i class="fa-solid fa-house"></i>
+                    <h3>dashbord</h3>
+                  </a>
+
+                  <a class="active" href="">
+                    <i class="fa-solid fa-user"></i>
+                    <h3>customers</h3>
+                  </a>
+
+                  <a href="">
+                    <i class="fa-solid fa-truck"></i>
+                    <h3>orders</h3>
+                  </a>
+
+                  <a href="">
+                    <i class="fa-regular fa-envelope"></i>
+                    <h3>messages</h3>
+                    <span class="message-count">23</span>
+                  </a>
+                  
+                  <a href="">
+                    <i class="fa-solid fa-boxes-packing"></i>
+                    <h3>product</h3>
+                  </a>
+                  
+                  <a href="">
+                  <i class="fa-solid fa-circle-info"></i>
+                  <h3>supports</h3>
+                </a>
+                
+                <a href="">
+                  <i class="fa-solid fa-gear"></i>
+                  <h3>settings</h3>
+                </a>
+                
+                <a href="">
+                  <i class="fa-regular fa-plus"></i>
+                  <h3>add product</h3>
+                </a>
+                
+                <a href="">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <h3>logout</h3>
+                  </a>
+            </div>
+        </div>
+
+        <div class="main-section">
+          <h1>dashboard</h1>
+          <div class="date">
+            <input type="date">
+          </div>
+          <div class="insights">
+            <div class="total-sales">
+              <span class="material-icons-outlined">analytics</span>
+              <div class="lefts">
+                <div class="left-text">
+                  <h3>Total Sales</h3>
+                  <h1>$25,024</h1>
+                </div>
+                <div class="progress">
+                  <svg>
+                    <circle cx="38" cy="38" r="36"></circle>
+                  </svg>
+                  <div class="number">
+                    <p>81%</p>
+                  </div>
+                </div>
+              </div>
+              <small class="textmuted">Last 24 hours</small>
+            </div>
+            <!------check out this styling-------->
+            <!-- <div class="saless">   
+              <div class="left">
+                <span class="material-icons-outlined">analytics</span>
+                <div class="left-text">
+                  <h3>Total Sales</h3>
+                  <h1>$25,024</h1>
+                </div>
+              <small class="textmuted">Last 24 hours</small>
+            </div>
+              <div class="right">
+                <div class="parent">
+
+                  <div class="progress">
+                    <div class="number">
+                      <p>81%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            
+            <!---------end of sales-------------->
+            <div class="expenses">
+              <span class="material-icons-outlined">bar_chart</span>
+              <div class="middle">
+                <div class="left">
+                  <h3>Total Expenses</h3>
+                  <h1>$13,000</h1>
+                </div>
+                <div class="progress">
+                  <svg>
+                    <circle cx="38" cy="38" r="36"></circle>
+                  </svg>
+                  <div class="number">
+                    <p>81%</p>
+                  </div>
+                </div>
+              </div>
+              <small class="textmuted">Last 24 hours</small>
+            </div>
+            <!---------end of sales-------------->
+            <div class="income">
+              <span class="material-icons-outlined">stacked_line_chart</span>
+              <div class="right">
+                <div class="left">
+                  <h3>Total Income</h3>
+                  <h1>$25,024</h1>
+                </div>
+                <div class="progress">
+                  <svg>
+                    <circle cx="38" cy="38" r="36"></circle>
+                  </svg>
+                  <div class="number">
+                    <p>81%</p>
+                  </div>
+                </div>
+              </div>
+              <small class="textmuted">Last 24 hours</small>
+            </div>
+            <!---------end of sales-------------->
+          </div>
+          <!---------recent orders---------->
+            <div class="recent-orders">
+              <h2>Recent Orders</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>product name</th>
+                    <th>product number</th>
+                    <th>payment</th>
+                    <th>status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  
+                </tbody>
+                <!-- <tbody>
+                  <tr>
+                    <td>Foldable mini drone</td>
+                    <td>85631</td>
+                    <td>Due</td>
+                    <td class="warning">pending</td>
+                    <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                    <td>Infinix Note 12</td>
+                    <td>364773</td> 
+                    <td>Due</td>
+                    <td class="warning">pending</td>
+                    <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                    <td>infinix Note 12pro</td>
+                    <td>56378</td>
+                    <td>Due</td>
+                    <td class="warning">pending</td>
+                    <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                    <td>infinix Smart 10</td>
+                    <td>36726</td>
+                    <td>Due</td>
+                    <td class="warning">pending</td>
+                    <td class="primary">Details</td>
+                  </tr>
+                  <tr>
+                    <td>iphone 13pro max ful screen</td>
+                    <td>86532</td>
+                    <td>Due</td>
+                    <td class="warning">pending</td>
+                    <td class="primary">Details</td>
+                  </tr>
+                </tbody> -->
+              </table>
+              <a class="showall" href="">show All</a>
+            </div>
+        </div>
+          <!---------last section------------>
+          <div class="rightSection">
+            <div class="top">
+              <button class="toggleMenu">
+                <span class="material-icons-sharp">table_rows</span>
+              </button>
+              <div class="top-icons">
+                <div id="lightMode">
+                  <span class="material-icons-sharp">light_mode</span>
+                </div>
+                <span class="material-icons-sharp" id="darkMode">dark_mode</span>
+              </div>
+              <div class="profiles">
+                <div>
+                  <p>Hey, <span>Samuel</span></p>
+                  <p>Admin</p>
+                </div>
+                <div class="profile">
+                  <img src="../pics/mypics.jpg" alt="userprofilepicture">
+                </div>
+              </div>
+            </div>
+            <h2>Recent Updates</h2>
+            <div class="update">
+              <div class="sub-update">
+                <div class="profile">
+                  <img src="data:image/jpeg;base64,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" alt="">
+                </div>
+                <div>
+                  <p><span>Mark Zukerberg</span> says meta will freeze hiring and cut costs</p>
+                </div>
+              </div>
+              <div class="sub-update">
+                <div class="profile">
+                  <img src="../pics/Instagram.jfif" alt="">
+                </div>
+                <div>
+                  <p><span>Instagram</span> founds $405m in EU over children`s privacy</p>
+                </div>
+              </div>
+              <div class="sub-update">
+                <div class="profile">
+                  <img src="../pics/jack.webp" alt="">
+                </div>
+                <div>
+                  <p><span>jack Dorsey</span> sent a private message to Elon Musk about twitter</p>
+                </div>
+              </div>
+            </div>
+            <!-- end of recent update -->
+            <div class="sales">
+              <h2 class="sls">Sales Analytics</h2>
+              <div class="sub-sales1 list">
+                <span class="material-icons-sharp">shopping_cart</span>
+                <div>
+                  <h3>Online Orders</h3>
+                  <p>last 24 hours</p>
+                </div>
+                <h5 class="success">+39%</h5>
+                <h3>2892</h3>
+              </div>
+              <div class="sub-sales2 list">
+                <span class="material-icons-sharp">local_mall</span>
+                <div class="info">
+                  <h3>Offline Orders</h3>
+                  <p>last 24 hours</p>
+                </div>
+                <h5 class="danger">-17%</h5>
+                <h3>8432</h3>
+              </div>
+              <div class="sub-sales3 list">
+                <span class="material-icons-sharp">person</span>
+                <div class="info">
+                  <h3>New Customer</h3>
+                  <p>last 24 hours</p>
+                </div>
+                <h5 class="success">+41%</h5>
+                <h3>6654</h3>
+              </div>
+              <div class="sub-sales4">
+                <div>
+                  <span class="material-icons-sharp">add</span>
+                  <p>Add products</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+    <script src="orders.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

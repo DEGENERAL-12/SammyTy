@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="authour" content="sam_codex">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>deliveroo-Takeout food delivery</title>
+        <link rel="stylesheet" href="../css.file/quizApp.css">
+        <link rel>
+    </head>
+    <body>
+        <div class="container result">
+            <h1 class="heading1">Quizz app</h1>
+
+            <!--display question-->
+            <h2 id="heading2">question</h2>
+
+            <!--display option-->
+            <Ul class="ansList">
+                <li>
+                    <input type="radio" class="ans" name="answer" id="A">
+                    <label id="a_text" for="a">answer</label>
+                </li> 
+
+                <li>
+                    <input type="radio" class="ans" name="answer" id="B">
+                    <label id="b_text" for="b">answer</label>
+                </li>
+
+                <li>
+                    <input type="radio" class="ans" name="answer" id="C">
+                    <label id="c_text" for="c">answer</label>
+                </li>
+
+                <li>
+                    <input type="radio" class="ans" name="answer" id="D">
+                    <label id="d_text" for="d">answer</label>
+                </li>
+            </Ul>
+            <button type="button" id="submit">submit</button>
+
+             <!-- previous question  -->
+        <div>
+            <button class="prevBtn">prev</button>
+        </div>
+        </div>
+
+       
+    </body>
+    <script src="../js_file/quizzApp2/quizeApp2.js"></script>
+</html>
+
+
+
+
+
+
+<!--     
+    <div class="container">
+    <div id="question"></div>
+    <div id="answer"></div>
+    <button onclick="NextQuestion()" id="nextbtn">Next</button>
+    <button onclick="PrevQuestion()" id="prevbtn">Previous</button>
+    <div id="finalLink"></div>
+</div>
+<script type="text/javascript">
+
+    class QuizPart{
+        constructor(questionDescription, chosenAnswer, prefix){
+            this.questionDescription = questionDescription;
+            this.chosenAnswer = chosenAnswer;
+            this.prefix = prefix;
+        }
+    }
+    
+    class ChosenAnswer{
+        constructor(id, name){
+            this.id = id;
+            this.name = name;
+        }
+    }
+
+    let Quiz = [
+        new QuizPart('Whats your size?', [
+            new ChosenAnswer('6595', '41'),
+            new ChosenAnswer('6598', '42'),
+            new ChosenAnswer('6601', '43'),
+        ], 'bd_shoe_size_ids='),
+
+        new QuizPart('What color would you like?', [
+            new ChosenAnswer('6053', 'Red'),
+            new ChosenAnswer('6044', 'Blue'),
+            new ChosenAnswer('6056', 'Yellow'),
+            new ChosenAnswer('6048', 'Green'),
+        ], 'color_ids='),
+
+        new QuizPart('What brand would you like?', [
+            new ChosenAnswer('5805', 'Adidas'),
+            new ChosenAnswer('5866', 'Nike'),
+            new ChosenAnswer('5875', 'Puma'),
+        ], 'manufacturer_ids=')
+    ]
+    // console.log(Quiz);
+    console.log(Quiz.length);
+
+    let url = [];
+
+    let questionNumber = 0;
+    let button = document.getElementById('answer');
+    let questionName = document.getElementById('question');
+    let nextbtn = document.getElementById('nextbtn');
+    let resultbtn = document.getElementById('FLink')
+
+function NextQuestion() {
+        let oldAnswerButton = document.querySelectorAll('.filter_anwser');
+
+        // Deletes old question when the next question is clicked
+        for (let answerButton of oldAnswerButton) {
+            answerButton.style.display = 'none';
+        }
+
+        let question = Quiz[questionNumber];
+
+        // Displays answers of the questions
+        for (let y = 0; y < question.chosenAnswer.length; y++) {
+            let item = question.chosenAnswer[y];
+            // Display answer buttons
+            let btn = document.createElement('button');
+            btn.value = item.id;
+            btn.className = "filter_anwser";
+            btn.textContent = item.name;
+            button.appendChild(btn);
+        }
+        // Check if your at the last question so the next button will stop being displayed.
+        if(Quiz.length - 1 === questionNumber){
+            nextbtn.style.display = 'none';
+            resultbtn.style.display = 'grid';
+        }
+
+        // Displays Question
+        questionName.textContent = question.questionDescription;
+        questionName.id = "questionID";
+
+        // adds 1 to question to see a different question
+        questionNumber++;
+}
+
+    function PrevQuestion() {
+        let oldAnswerButton = document.querySelectorAll('.filter_anwser');
+
+        // Deletes old question when the next question is clicked
+        for (let answerButton of oldAnswerButton) {
+            answerButton.style.display = 'none';
+        }
+
+        let question = Quiz[questionNumber];
+
+        // Displays answers of the questions
+        for (let y = question.chosenAnswer.length; y > 0; y--) {
+            let item = question.chosenAnswer[0];
+            // Display answer buttons
+            let btn = document.createElement('button');
+            btn.value = item.id;
+            btn.className = "filter_anwser";
+            btn.textContent = item.name;
+            button.appendChild(btn);
+        }
+
+        // Displays Question
+        questionName.textContent = question.questionDescription;
+        questionName.id = "questionID";
+
+        // Deletes 1 to see the previous question
+        questionNumber--;
+
+    }
+    </script> -->
