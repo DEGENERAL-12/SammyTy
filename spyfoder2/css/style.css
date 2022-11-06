@@ -14585,6 +14585,7 @@ input:checked+.mode-container i.gg-moon {
   padding: 0 15px;
   transition: all 0.5s ease;
   position: relative;
+  /* color: #fd7e14; */
 }
 
 .w3l-header .navbar-dark .navbar-nav .show>.nav-link,
@@ -16035,7 +16036,7 @@ button.owl-next {
 }
 
 .stats_info {
-  text-align: left;
+  text-align: center;
   border-top: none;
   border-bottom: none;
   border-right: 1px solid var(--bg-border);

@@ -1,0 +1,483 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;700;800&family=Poppins:wght@300;500;600;800&display=swap');
+
+:root{
+    --primary-color:       #ff4400;
+    --secondary:     #ffc107;
+    --text:          #e9ecef;
+    --deep-text:     #212529;
+    --search-text:   #ced4da;
+    --icon-bkg:      #212529;
+    --hover-color:   #ff4400;  
+    --white:        #fff;
+    
+
+    /*-------text-color------- */
+    --search-text:     #ced4da;
+
+    /* warnings callors */
+    --success:       #198754;
+    --warning:       #ffc107;
+    --danger:        #dc3545;
+    --light:         #f8f9fa ;
+    --dark:          #212529;
+
+    /* gradient */
+    --gradient-color:  linear-gradient(to right, rgba(#ff4400, 0.95), rgba(#212529, 0.5));
+
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100vw;
+    text-decoration: none;
+    list-style: none;
+    background: rgb(224, 216, 200);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.container .header{
+    position: fixed;
+    /* position: relative; */
+    top: 0px;
+    width: 100%;
+    height: 90px;     display: flex;
+    /* // justify-content: space-between; */
+    align-items: center;
+    z-index: 90;
+    margin: 0;
+    padding: 0 2px;
+}
+
+.container .logo{
+height: 100%;
+display: flex;
+justify-content: space-between;
+background-color: var(--primary-color);
+}
+
+.container .logo .sub-logo{
+    width: 220px;
+    margin-top: 20px;
+    height: 50px;
+    text-align: center;
+}
+
+.sub-logo a{
+    padding: 6px;
+    font-weight: 800;
+    font-family: 'open sans';
+    text-transform: uppercase;
+    color: var(--white);
+    font-size: 22px;
+    display: block;
+    text-decoration: none;
+}
+            
+        
+.container .navbar{
+    flex: 4;
+    display: flex;
+    height: 100%;
+    background: var(--white);
+    position: relative;
+}
+
+/*-------------- note that the name carries all of the logo */
+/*///////// change the logo2 to side-logo */
+.navbar .side-logo{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background: var(--primary-color); */
+    display: none;
+}
+
+        
+.side-logo .side-logo2{
+    width: 200px;
+    margin-top: 20px;
+    height: 57px;
+    /* text-align: center; */
+}
+/* -------------sub-logo2 change to side logo 2 */
+.side-logo2 a{
+    padding: 6px 0;
+    font-weight: 800;
+    margin-left: 7px;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+    color: var(--white);
+    font-size: 22px;
+    display: block;
+    text-decoration: none;
+}
+
+.side-logo2 a span{
+    color: var(--primary-color);
+}
+
+.side-logo .close{
+    display: none;
+    margin-right: 20px;
+    /* width: 80px; */
+    padding: 5px;
+    cursor: pointer;
+}
+.side-logo .close i{
+    font-size: 30px;
+    color: var(--white);
+
+}
+/* end of side-logo */
+
+/* start of nav menu */
+.nav-menu{
+    display: none;
+    cursor: pointer;
+    width: 50px; 
+    border: none;
+    background: none;
+    height: 50px;
+    /* display: ; */
+    /* position: absolute;
+    top: 50%;
+    right: 35%;
+    transform: translate(-50%, -50%); */
+
+}
+
+.nav-menu i{
+        color: var(--primary-color);
+        font-size: 25px;
+}
+
+.nav-links{
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* transition: 0.7s ease-in-out; */
+}
+
+.nav-links ul{   
+    display: flex;
+    justify-content: space-between;
+    /* flex-shrink: ; */
+    margin: 0;
+    /* gap: 1.8rem; */
+}
+
+.nav-links ul li{
+    list-style: none;
+    padding: 0 0.765rem;
+}
+
+.nav-links ul li a{
+    /* display: block; */
+    padding: 13px 15px;
+    color: var(--deep-text);
+    font-size: 19px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.5s;
+}
+
+.nav-links ul li a:hover{
+    color: var(--hover-color)
+}
+
+.container .rounded-btn{ 
+    border-radius: 125px;
+    background-image: linear-gradient(to right, #eb551e, #b3b3b3);
+    /* background-color: linear-gradient(to right, rgba(#ff4400, 0.95), rgba(#212529, 0.5)); */
+    position: relative;
+    padding: 0.934rem 4.657rem 0.934rem 1.64rem;
+    margin: 0;
+    border: none;
+    width: 250px;
+    margin-right: 1.95rem;
+    display: flex; 
+    text-transform: capitalize;
+    /* // font-family: mo ; */
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--icon-bkg);
+}
+
+.rounded-btn:hover{
+    background: rgba(255, 242, 242, 0.5);
+    color: var(--text);
+}
+
+.rounded-btn span{
+        position: absolute;
+        width: 2.7rem;
+        height: 2.7rem;
+        background: var(--primary-color);
+        top: 50%;
+        right: 5px;
+        transform: translateY(-50%);
+        border-radius: 50%;
+}
+
+.rounded-btn span i{ 
+    color: var(--white);
+    font-size: 1rem;
+    line-height: 2.5rem;
+}
+
+/* --------input styling */
+.search-bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    height: 100%;
+    background: var(--icon-bkg);
+    gap: 1rem;
+}
+
+.search-bar .srch{
+    position: relative;
+    padding: 4px;
+}
+
+.search-bar .srch input{
+    width: 100px;
+    height: 50px;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: var(--white);
+    font-size: 20px;
+    text-align: left;
+}
+
+.search-bar .srch input::placeholder{
+    color: var(--white);
+}
+
+.btn{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: none;
+    top: 19%;
+    color: var(--light);
+    right: 0;
+    transform: scale(0.9);
+    cursor: pointer;
+    background: transparent;
+}
+
+.btn i{
+    font-size: 20px;
+}
+
+.note{
+    width: 80px;
+    height: 60px;
+    background: var(--icon-bkg);
+    text-align: center;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: 1s;
+}
+
+.note:hover{
+    background: var(--primary-color);
+}
+
+.note i{
+    margin-top: 9px;
+    color: var(--white);
+    font-size: 45px;
+    border-radius: 10px;
+} 
+
+/*-------- section2 styling */
+
+/* .section2{
+    width: 100%;
+    display: flex;
+} */
+
+.animation-sec{
+    position: relative;
+    /* overflow: hidden; */
+    width: 100vw;
+    height: 700px;
+    /* display: flex; */
+}
+
+.image-display{
+    position: relative;
+    /* display: flex; */
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    animation: animate;
+}
+
+.images{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-size: contain;
+    background-position: center;
+}
+
+.intro-text{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+}
+
+
+
+
+
+
+
+/* media query sections */
+    @media screen and (max-width:1200px){
+        /* .search-bar{
+            display: block;
+        } */
+
+    .container .navbar{
+        justify-content: center;
+        align-items: center;
+        }
+
+    .nav-links{
+        position: fixed;
+        /* visibility: hidden; */
+        top: 0px;
+        left: -500px;
+        height: 100vh;
+        width: 40%;
+        flex-flow: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        background: var(--icon-bkg);
+        }
+
+    .nav-links .side-logo{
+        display: flex;
+        width: 98%;
+        height: 100px;
+        align-items: center;
+        justify-content: space-between;
+        /* background: var(--deep-text); */
+        border-bottom: 1px solid #ced4da;
+    }   
+                        
+
+    .side-logo .side-logo2{
+        width: 250px;
+        text-align: center;
+        /* justify-content: center;
+        align-items: center;
+        gap: 2px; */
+    }               
+
+    .side-logo .side-logo2 span a{
+        color: var(--primary);
+    }
+
+    /* close btn */
+    .side-logo .close{
+        display: block;
+    }
+
+    .nav-links ul{
+        flex-direction: column;
+        margin-top: 20px;
+        width: 98%;
+        padding: 0;
+        gap: 1.5rem;
+            
+    }
+
+    .nav-links ul li{
+        padding: 0;
+    }
+
+    .nav-links ul li a{
+        border-bottom: 1px solid var(--text);
+        margin: 0 1rem 0 0.5rem;
+        color: var(--text);
+        display: block;
+        padding: 0.6rem 0;
+    }
+
+
+    .nav-links .rounded-btn{
+        /* display: none; */
+       position: block;
+        display: flex;
+       justify-content: center;
+       width:250px;
+       margin-top: 2rem;
+       color: var(--text);
+       padding-left: 1rem;
+       font-size: 15px;
+       background: none;
+       transition: 0.6s;
+       }
+
+    .nav-links .rounded-btn span{
+        background: none;
+        left: 17px;
+        width: 1rem;
+    }
+
+       .navbar .nav-menu{
+        display: block;
+       }
+
+
+}
+
+/* --------A MEDIA QUERIES SECTION */
+@media screen and (max-width:570px){
+
+    .search-bar{
+        display: none;
+    }
+
+    .rounded-btn{
+         display: none;
+         /* position: block; */
+        display: flex;
+        justify-content: center;
+        width:250px;
+        margin-top: 2rem;
+        color: var(--text);
+        padding-left: 1rem;
+        font-size: 15px;
+        background: none;
+        transition: 0.6s;
+        }
+        
+        .nav-links{
+            width: 68%;
+        }
+        
+    }
